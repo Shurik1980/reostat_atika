@@ -1,0 +1,16 @@
+C:\Reostat_RF\src\gui\reostat\reostat\bin\Release\reostat.exe
+C:\Reostat_RF\src\gui\reostat\reostat\bin\Release\reostat.pdb
+C:\Reostat_RF\src\gui\reostat\reostat\bin\Release\LBIndustrialCtrls.dll
+C:\Reostat_RF\src\gui\reostat\reostat\bin\Release\Lxsoft.Controls.LedControl.dll
+C:\Reostat_RF\src\gui\reostat\reostat\bin\Release\ZedGraph.dll
+C:\Reostat_RF\src\gui\reostat\reostat\obj\Release\ResolveAssemblyReference.cache
+C:\Reostat_RF\src\gui\reostat\reostat\obj\Release\reostat.ReportForm.resources
+C:\Reostat_RF\src\gui\reostat\reostat\obj\Release\reostat.GraphExternForm.resources
+C:\Reostat_RF\src\gui\reostat\reostat\obj\Release\reostat.GraphPowerForm.resources
+C:\Reostat_RF\src\gui\reostat\reostat\obj\Release\reostat.openForm.resources
+C:\Reostat_RF\src\gui\reostat\reostat\obj\Release\reostat.Properties.Resources.resources
+C:\Reostat_RF\src\gui\reostat\reostat\obj\Release\reostat.OkReport.resources
+C:\Reostat_RF\src\gui\reostat\reostat\obj\Release\reostat.WorkForm.resources
+C:\Reostat_RF\src\gui\reostat\reostat\obj\Release\reostat.csproj.GenerateResource.Cache
+C:\Reostat_RF\src\gui\reostat\reostat\obj\Release\reostat.exe
+C:\Reostat_RF\src\gui\reostat\reostat\obj\Release\reostat.pdb
