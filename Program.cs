@@ -39,6 +39,8 @@ namespace reostat
         private static System.Threading.Timer time;
         private static System.Threading.TimerCallback cb;
         private static int owtemp=0;
+        private static int pozExt = 0;
+        private static bool flagExt = false;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -85,6 +87,7 @@ namespace reostat
         {
 
             CallBackMy.callbackEventHandlerPozReostat = new CallBackMy.callbackEventPozReostat(ReloadPoz);
+            CallBackMy.callbackEventHandlerPozKM = new CallBackMy.callbackEventPozKM(ReloadPozKM);
             CallBackMy.callbackEventHandlerTypeLoc = new CallBackMy.callbackEventTypeLoc(ReloadTypeLoc);
             CallBackMy.callbackEventHandlerNumberLoc = new CallBackMy.callbackEventNumberLoc(ReloadNumberLoc);
             CallBackMy.callbackEventHandlerExtPoint = new CallBackMy.callbackEventExtPoint(ReloadExtPoint);
@@ -204,11 +207,20 @@ namespace reostat
                     if (xml.Count > 0)
                     {
                         def.DefinitionPoz(xml[0].InnerText, typeLoc);
-                        dataClass[10].PozDGU = def.PozDGU;//рабочее
+                        if (flagExt == false)
+                            dataClass[10].PozDGU = def.PozDGU;//рабочее
+                        else
+                            dataClass[10].PozDGU = pozExt;
                         pozTeplovoz = dataClass[10].PozDGU;
                         dataClass[10].StateVSH1 = def.StateVSH1;
                         dataClass[10].StateVSH2 = def.StateVSH2;
                     }
+                }
+
+                if (flagExt == true)
+                {
+                    dataClass[10].PozDGU = pozExt;
+                    pozTeplovoz = dataClass[10].PozDGU;
                 }
 
                 if (pozTeplovoz != pozTeplovozPrev)
@@ -432,6 +444,12 @@ namespace reostat
             numberLoc = param;
         }
 
+        static void ReloadPozKM(int param, bool flag)
+        {
+            pozExt = param;
+            flagExt = flag;
+        }
+
         static void ReloadExtPoint(ExtData ext)
         {
             extData = ext;
@@ -551,6 +569,9 @@ namespace reostat
 
         public delegate void callbackEventPozReostat(int poz);
         public static callbackEventPozReostat callbackEventHandlerPozReostat;
+
+        public delegate void callbackEventPozKM(int pozKM, bool flag);
+        public static callbackEventPozKM callbackEventHandlerPozKM;
 
         public delegate void callbackEventTypeLoc(string type);
         public static callbackEventTypeLoc callbackEventHandlerTypeLoc;

@@ -13,6 +13,7 @@ namespace reostat
 {
     public partial class WorkForm : Form
     {
+        private int pozTeplovoz;
         private myclass[] dataOpen;
         System.Windows.Forms.Timer workTimer = new System.Windows.Forms.Timer();
 
@@ -66,7 +67,7 @@ namespace reostat
                 minute = "0" + minute;
             }
             string st = hour + "-" + minute;
-            clockControl.Text = st;
+            //clockControl.Text = st;
 
             int min = 0;
             int sec = 0;
@@ -216,6 +217,31 @@ namespace reostat
         private void groupBox23_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            CallBackMy.callbackEventHandlerPozKM(pozTeplovoz, checkBox1.Checked);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                if (pozTeplovoz < 8)
+                    pozTeplovoz++;
+                CallBackMy.callbackEventHandlerPozKM(pozTeplovoz, true);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                if (pozTeplovoz > 0)
+                    pozTeplovoz--;
+                CallBackMy.callbackEventHandlerPozKM(pozTeplovoz, true);
+            }
         }
      
     }

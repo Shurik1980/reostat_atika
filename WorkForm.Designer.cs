@@ -35,7 +35,6 @@
             this.rpmControl = new LxControl.LxLedControl();
             this.pozDGUControl = new LxControl.LxLedControl();
             this.pozReostatControl = new LxControl.LxLedControl();
-            this.clockControl = new LxControl.LxLedControl();
             this.oilTempControl = new LxControl.LxLedControl();
             this.waterTempControl = new LxControl.LxLedControl();
             this.gas2Control = new LxControl.LxLedControl();
@@ -103,7 +102,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.nextPowerButton = new System.Windows.Forms.Button();
             this.prevOpenForm = new System.Windows.Forms.Button();
-            this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
@@ -114,12 +112,14 @@
             this.groupBox23 = new System.Windows.Forms.GroupBox();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
             this.tempBortControl = new LxControl.LxLedControl();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.currentControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.voltageControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpmControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pozDGUControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pozReostatControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clockControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oilTempControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.waterTempControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gas2Control)).BeginInit();
@@ -159,7 +159,6 @@
             this.groupBox16.SuspendLayout();
             this.groupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.groupBox18.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.groupBox20.SuspendLayout();
             this.groupBox21.SuspendLayout();
@@ -251,7 +250,7 @@
             this.pozDGUControl.FocusedBorderColor = System.Drawing.Color.Black;
             this.pozDGUControl.ForeColor = System.Drawing.Color.White;
             this.pozDGUControl.HighlightOpaque = ((byte)(50));
-            this.pozDGUControl.Location = new System.Drawing.Point(38, 80);
+            this.pozDGUControl.Location = new System.Drawing.Point(15, 53);
             this.pozDGUControl.Name = "pozDGUControl";
             this.pozDGUControl.Size = new System.Drawing.Size(94, 113);
             this.pozDGUControl.TabIndex = 12;
@@ -268,28 +267,11 @@
             this.pozReostatControl.FocusedBorderColor = System.Drawing.Color.Black;
             this.pozReostatControl.ForeColor = System.Drawing.Color.White;
             this.pozReostatControl.HighlightOpaque = ((byte)(50));
-            this.pozReostatControl.Location = new System.Drawing.Point(110, 110);
+            this.pozReostatControl.Location = new System.Drawing.Point(88, 114);
             this.pozReostatControl.Name = "pozReostatControl";
             this.pozReostatControl.Size = new System.Drawing.Size(68, 118);
             this.pozReostatControl.TabIndex = 16;
             this.pozReostatControl.Text = "0";
-            // 
-            // clockControl
-            // 
-            this.clockControl.BackColor = System.Drawing.Color.Transparent;
-            this.clockControl.BackColor_1 = System.Drawing.Color.Black;
-            this.clockControl.BackColor_2 = System.Drawing.Color.Black;
-            this.clockControl.BevelRate = 0.5F;
-            this.clockControl.BorderColor = System.Drawing.Color.Black;
-            this.clockControl.FadedColor = System.Drawing.Color.Black;
-            this.clockControl.FocusedBorderColor = System.Drawing.Color.Black;
-            this.clockControl.ForeColor = System.Drawing.Color.White;
-            this.clockControl.HighlightOpaque = ((byte)(50));
-            this.clockControl.Location = new System.Drawing.Point(6, 21);
-            this.clockControl.Name = "clockControl";
-            this.clockControl.Size = new System.Drawing.Size(140, 42);
-            this.clockControl.TabIndex = 19;
-            this.clockControl.Text = "0";
             // 
             // oilTempControl
             // 
@@ -573,9 +555,9 @@
             this.pozTimeControl.FocusedBorderColor = System.Drawing.Color.Black;
             this.pozTimeControl.ForeColor = System.Drawing.Color.White;
             this.pozTimeControl.HighlightOpaque = ((byte)(50));
-            this.pozTimeControl.Location = new System.Drawing.Point(6, 46);
+            this.pozTimeControl.Location = new System.Drawing.Point(6, 37);
             this.pozTimeControl.Name = "pozTimeControl";
-            this.pozTimeControl.Size = new System.Drawing.Size(128, 45);
+            this.pozTimeControl.Size = new System.Drawing.Size(125, 39);
             this.pozTimeControl.TabIndex = 51;
             this.pozTimeControl.Text = "0";
             // 
@@ -608,10 +590,10 @@
             this.groupBox1.Controls.Add(this.currentControl);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(457, 615);
+            this.groupBox1.Location = new System.Drawing.Point(402, 606);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox1.Size = new System.Drawing.Size(222, 150);
+            this.groupBox1.Size = new System.Drawing.Size(213, 150);
             this.groupBox1.TabIndex = 66;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "       Ток генератора";
@@ -640,10 +622,10 @@
             this.groupBox2.Controls.Add(this.voltageControl);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(218, 615);
+            this.groupBox2.Location = new System.Drawing.Point(195, 606);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox2.Size = new System.Drawing.Size(218, 150);
+            this.groupBox2.Size = new System.Drawing.Size(201, 150);
             this.groupBox2.TabIndex = 67;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Напряжение генератора";
@@ -671,10 +653,10 @@
             this.groupBox3.Controls.Add(this.rpmControl);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(12, 615);
+            this.groupBox3.Location = new System.Drawing.Point(12, 606);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox3.Size = new System.Drawing.Size(200, 150);
+            this.groupBox3.Size = new System.Drawing.Size(172, 150);
             this.groupBox3.TabIndex = 68;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Обороты дизеля";
@@ -702,10 +684,10 @@
             this.groupBox4.Controls.Add(this.voltageBortControl);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(697, 615);
+            this.groupBox4.Location = new System.Drawing.Point(636, 606);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox4.Size = new System.Drawing.Size(200, 150);
+            this.groupBox4.Size = new System.Drawing.Size(192, 150);
             this.groupBox4.TabIndex = 69;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Напряжение бортовой сети";
@@ -729,13 +711,16 @@
             this.groupBox5.AutoSize = true;
             this.groupBox5.BackColor = System.Drawing.Color.Black;
             this.groupBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.groupBox5.Controls.Add(this.checkBox1);
+            this.groupBox5.Controls.Add(this.button2);
+            this.groupBox5.Controls.Add(this.button1);
             this.groupBox5.Controls.Add(this.pozDGUControl);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(635, 5);
+            this.groupBox5.Location = new System.Drawing.Point(432, 5);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox5.Size = new System.Drawing.Size(154, 236);
+            this.groupBox5.Size = new System.Drawing.Size(268, 236);
             this.groupBox5.TabIndex = 70;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Позиция контроллера  машиниста";
@@ -754,10 +739,10 @@
             this.groupBox6.Controls.Add(this.gas1Control);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox6.ForeColor = System.Drawing.Color.White;
-            this.groupBox6.Location = new System.Drawing.Point(918, 312);
+            this.groupBox6.Location = new System.Drawing.Point(839, 304);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox6.Size = new System.Drawing.Size(210, 145);
+            this.groupBox6.Size = new System.Drawing.Size(215, 145);
             this.groupBox6.TabIndex = 71;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Температура цилиндра 1";
@@ -807,10 +792,10 @@
             this.groupBox7.Controls.Add(this.gas2Control);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox7.ForeColor = System.Drawing.Color.White;
-            this.groupBox7.Location = new System.Drawing.Point(1139, 312);
+            this.groupBox7.Location = new System.Drawing.Point(1065, 304);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox7.Size = new System.Drawing.Size(210, 145);
+            this.groupBox7.Size = new System.Drawing.Size(215, 145);
             this.groupBox7.TabIndex = 72;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Температура цилиндра 2";
@@ -857,10 +842,10 @@
             this.groupBox8.Controls.Add(this.pozTimeControl);
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox8.ForeColor = System.Drawing.Color.White;
-            this.groupBox8.Location = new System.Drawing.Point(451, 120);
+            this.groupBox8.Location = new System.Drawing.Point(224, 5);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox8.Size = new System.Drawing.Size(165, 119);
+            this.groupBox8.Size = new System.Drawing.Size(189, 104);
             this.groupBox8.TabIndex = 73;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Время работы на позиции";
@@ -880,10 +865,10 @@
             this.groupBox9.Controls.Add(this.label18);
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox9.ForeColor = System.Drawing.Color.White;
-            this.groupBox9.Location = new System.Drawing.Point(805, 5);
+            this.groupBox9.Location = new System.Drawing.Point(715, 7);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox9.Size = new System.Drawing.Size(103, 234);
+            this.groupBox9.Size = new System.Drawing.Size(113, 234);
             this.groupBox9.TabIndex = 74;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "     Реле переходов";
@@ -902,12 +887,12 @@
             this.groupBox10.Controls.Add(this.pictureBox1);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox10.ForeColor = System.Drawing.Color.White;
-            this.groupBox10.Location = new System.Drawing.Point(932, 5);
+            this.groupBox10.Location = new System.Drawing.Point(839, 6);
             this.groupBox10.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Padding = new System.Windows.Forms.Padding(0);
             this.groupBox10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox10.Size = new System.Drawing.Size(200, 145);
+            this.groupBox10.Size = new System.Drawing.Size(199, 145);
             this.groupBox10.TabIndex = 76;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Температура воды";
@@ -962,10 +947,10 @@
             this.groupBox11.Controls.Add(this.gas3Control);
             this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox11.ForeColor = System.Drawing.Color.White;
-            this.groupBox11.Location = new System.Drawing.Point(918, 469);
+            this.groupBox11.Location = new System.Drawing.Point(839, 455);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox11.Size = new System.Drawing.Size(210, 145);
+            this.groupBox11.Size = new System.Drawing.Size(215, 145);
             this.groupBox11.TabIndex = 77;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Температура цилиндра 3";
@@ -1015,10 +1000,10 @@
             this.groupBox12.Controls.Add(this.gas4Control);
             this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox12.ForeColor = System.Drawing.Color.White;
-            this.groupBox12.Location = new System.Drawing.Point(1139, 469);
+            this.groupBox12.Location = new System.Drawing.Point(1065, 455);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox12.Size = new System.Drawing.Size(210, 145);
+            this.groupBox12.Size = new System.Drawing.Size(215, 145);
             this.groupBox12.TabIndex = 78;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Температура цилиндра 4";
@@ -1069,10 +1054,10 @@
             this.groupBox13.Controls.Add(this.gas5Control);
             this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox13.ForeColor = System.Drawing.Color.White;
-            this.groupBox13.Location = new System.Drawing.Point(918, 620);
+            this.groupBox13.Location = new System.Drawing.Point(839, 606);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox13.Size = new System.Drawing.Size(210, 145);
+            this.groupBox13.Size = new System.Drawing.Size(215, 145);
             this.groupBox13.TabIndex = 79;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Температура цилиндра 5";
@@ -1122,10 +1107,10 @@
             this.groupBox14.Controls.Add(this.gas6Control);
             this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox14.ForeColor = System.Drawing.Color.White;
-            this.groupBox14.Location = new System.Drawing.Point(1139, 620);
+            this.groupBox14.Location = new System.Drawing.Point(1065, 606);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox14.Size = new System.Drawing.Size(210, 145);
+            this.groupBox14.Size = new System.Drawing.Size(215, 145);
             this.groupBox14.TabIndex = 80;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Температура цилиндра 6";
@@ -1173,10 +1158,10 @@
             this.groupBox15.Controls.Add(this.pressOilControl);
             this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox15.ForeColor = System.Drawing.Color.White;
-            this.groupBox15.Location = new System.Drawing.Point(1149, 153);
+            this.groupBox15.Location = new System.Drawing.Point(1065, 153);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox15.Size = new System.Drawing.Size(200, 145);
+            this.groupBox15.Size = new System.Drawing.Size(203, 145);
             this.groupBox15.TabIndex = 82;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Давление масла";
@@ -1214,7 +1199,7 @@
             this.groupBox16.Controls.Add(this.powerMeter);
             this.groupBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox16.ForeColor = System.Drawing.Color.White;
-            this.groupBox16.Location = new System.Drawing.Point(507, 247);
+            this.groupBox16.Location = new System.Drawing.Point(470, 247);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox16.Size = new System.Drawing.Size(358, 351);
@@ -1236,7 +1221,7 @@
             this.groupBox17.Controls.Add(this.oilTempControl);
             this.groupBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox17.ForeColor = System.Drawing.Color.White;
-            this.groupBox17.Location = new System.Drawing.Point(1149, 5);
+            this.groupBox17.Location = new System.Drawing.Point(1065, 5);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox17.Size = new System.Drawing.Size(200, 146);
@@ -1303,25 +1288,6 @@
             this.prevOpenForm.UseVisualStyleBackColor = true;
             this.prevOpenForm.Click += new System.EventHandler(this.prevOpenForm_Click);
             // 
-            // groupBox18
-            // 
-            this.groupBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox18.AutoSize = true;
-            this.groupBox18.BackColor = System.Drawing.Color.Black;
-            this.groupBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.groupBox18.Controls.Add(this.clockControl);
-            this.groupBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox18.ForeColor = System.Drawing.Color.White;
-            this.groupBox18.Location = new System.Drawing.Point(451, 3);
-            this.groupBox18.Name = "groupBox18";
-            this.groupBox18.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox18.Size = new System.Drawing.Size(165, 106);
-            this.groupBox18.TabIndex = 86;
-            this.groupBox18.TabStop = false;
-            this.groupBox18.Text = "Часы";
-            // 
             // groupBox19
             // 
             this.groupBox19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
@@ -1334,10 +1300,10 @@
             this.groupBox19.Controls.Add(this.pressGasControl);
             this.groupBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox19.ForeColor = System.Drawing.Color.White;
-            this.groupBox19.Location = new System.Drawing.Point(932, 153);
+            this.groupBox19.Location = new System.Drawing.Point(839, 153);
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox19.Size = new System.Drawing.Size(200, 145);
+            this.groupBox19.Size = new System.Drawing.Size(199, 145);
             this.groupBox19.TabIndex = 87;
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "Давление наддува";
@@ -1366,10 +1332,10 @@
             this.groupBox20.Controls.Add(this.downPozReostatButton);
             this.groupBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox20.ForeColor = System.Drawing.Color.White;
-            this.groupBox20.Location = new System.Drawing.Point(288, 247);
+            this.groupBox20.Location = new System.Drawing.Point(274, 247);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox20.Size = new System.Drawing.Size(200, 351);
+            this.groupBox20.Size = new System.Drawing.Size(180, 351);
             this.groupBox20.TabIndex = 88;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "  Ступени реостата";
@@ -1408,7 +1374,7 @@
             this.groupBox21.Location = new System.Drawing.Point(18, 120);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox21.Size = new System.Drawing.Size(183, 119);
+            this.groupBox21.Size = new System.Drawing.Size(178, 119);
             this.groupBox21.TabIndex = 89;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Тип тепловоза";
@@ -1424,10 +1390,10 @@
             this.groupBox22.Controls.Add(this.numberLocWork);
             this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox22.ForeColor = System.Drawing.Color.White;
-            this.groupBox22.Location = new System.Drawing.Point(227, 121);
+            this.groupBox22.Location = new System.Drawing.Point(224, 120);
             this.groupBox22.Name = "groupBox22";
             this.groupBox22.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox22.Size = new System.Drawing.Size(209, 118);
+            this.groupBox22.Size = new System.Drawing.Size(189, 118);
             this.groupBox22.TabIndex = 90;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Номер  тепловоза";
@@ -1447,7 +1413,7 @@
             this.groupBox23.Location = new System.Drawing.Point(18, 249);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox23.Size = new System.Drawing.Size(251, 351);
+            this.groupBox23.Size = new System.Drawing.Size(236, 351);
             this.groupBox23.TabIndex = 91;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "   Управление программой";
@@ -1464,10 +1430,10 @@
             this.groupBox24.Controls.Add(this.tempBortControl);
             this.groupBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox24.ForeColor = System.Drawing.Color.White;
-            this.groupBox24.Location = new System.Drawing.Point(271, 3);
+            this.groupBox24.Location = new System.Drawing.Point(18, 3);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox24.Size = new System.Drawing.Size(165, 106);
+            this.groupBox24.Size = new System.Drawing.Size(178, 106);
             this.groupBox24.TabIndex = 92;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Температура";
@@ -1489,13 +1455,44 @@
             this.tempBortControl.TabIndex = 19;
             this.tempBortControl.Text = "0";
             // 
+            // button1
+            // 
+            this.button1.Image = global::reostat.Properties.Resources.up1;
+            this.button1.Location = new System.Drawing.Point(177, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(60, 60);
+            this.button1.TabIndex = 17;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Image = global::reostat.Properties.Resources.down1;
+            this.button2.Location = new System.Drawing.Point(177, 148);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(60, 60);
+            this.button2.TabIndex = 93;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(169, 106);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(82, 20);
+            this.checkBox1.TabIndex = 94;
+            this.checkBox1.Text = "Ручной";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // WorkForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.ClientSize = new System.Drawing.Size(1292, 768);
             this.Controls.Add(this.groupBox24);
             this.Controls.Add(this.groupBox23);
             this.Controls.Add(this.groupBox22);
@@ -1503,7 +1500,6 @@
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox20);
             this.Controls.Add(this.groupBox19);
-            this.Controls.Add(this.groupBox18);
             this.Controls.Add(this.groupBox17);
             this.Controls.Add(this.groupBox16);
             this.Controls.Add(this.groupBox15);
@@ -1531,7 +1527,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.rpmControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pozDGUControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pozReostatControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clockControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oilTempControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.waterTempControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gas2Control)).EndInit();
@@ -1554,6 +1549,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -1585,7 +1581,6 @@
             this.groupBox17.ResumeLayout(false);
             this.groupBox17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.groupBox18.ResumeLayout(false);
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
             this.groupBox20.ResumeLayout(false);
@@ -1614,7 +1609,6 @@
         private System.Windows.Forms.Button downPozReostatButton;
         private LxControl.LxLedControl pozReostatControl;
         private System.Windows.Forms.Button nextPowerButton;
-        private LxControl.LxLedControl clockControl;
         private LxControl.LxLedControl oilTempControl;
         private LxControl.LxLedControl waterTempControl;
         private LxControl.LxLedControl gas2Control;
@@ -1660,7 +1654,6 @@
         private System.Windows.Forms.GroupBox groupBox16;
         private System.Windows.Forms.GroupBox groupBox17;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.GroupBox groupBox18;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox19;
         private System.Windows.Forms.Label label4;
@@ -1689,5 +1682,8 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.GroupBox groupBox24;
         private LxControl.LxLedControl tempBortControl;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
